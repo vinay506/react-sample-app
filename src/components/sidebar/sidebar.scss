@@ -1,0 +1,10 @@
+.sidebar_container{
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(128, 0, 128);
+    li{
+        list-style: none;
+        color:rgb(120,120,120);
+        margin-top: 2%;
+    }
+}
