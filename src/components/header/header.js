@@ -4,7 +4,7 @@ import './header.scss';
 function Header() {
     return (
         <div className="header_container">
-            Header Of APP 
+           <span> Header Of APP </span>
         </div>
     )
 }

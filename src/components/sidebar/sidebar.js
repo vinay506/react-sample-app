@@ -1,4 +1,7 @@
 import React from 'react'
+import './sidebar.scss';
+// import {Link} from 'react-router-dom'
+
 const pageConfig = require('./pages_config.json')
 function SideBar() {
 
@@ -9,9 +12,7 @@ function SideBar() {
 
     return ( 
         <div className="sidebar_container">
-            <ul>
                 {listOfLinks}
-            </ul>            
         </div>
     )
 }

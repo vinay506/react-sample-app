@@ -3,18 +3,22 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-import {BrowserRouter,Switch} from 'react-router-dom'
+import { BrowserRouter, Switch } from 'react-router-dom'
+import Header from './components/header/header';
+import SideBar from './components/sidebar/sidebar';
 
-const RootOfApp = () =>{
+const RootOfApp = () => {
   return (
     <BrowserRouter>
-        <App />
-   </BrowserRouter>
+      <Header />
+      <SideBar />
+      <App className=""/>
+    </BrowserRouter>
   )
 }
 
 ReactDOM.render(
-  <RootOfApp/>,
+  <RootOfApp />,
   document.getElementById('root')
 );
 
