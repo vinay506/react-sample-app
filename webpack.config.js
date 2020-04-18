@@ -11,9 +11,11 @@ var config = {
     output:{
         path: path.resolve(__dirname,'dist'),
         filename:'bundle.js',
-        // publicPath:'./dist'
+         publicPath:'/'
     },
-
+    devServer:{
+        historyApiFallback : true
+    },
     module:{
         rules:[ {
             test:/\.(js|jsx)?$/,

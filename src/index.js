@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter, Switch } from 'react-router-dom'
+import { BrowserRouter, Switch,Route } from 'react-router-dom'
 import Header from './components/header/header';
 
 
@@ -12,7 +12,7 @@ const RootOfApp = () => {
     <BrowserRouter>
       <Header />
       <Switch>
-        <App className="" />
+        <Route path="/" component={App}></Route>
       </Switch>
     </BrowserRouter>
   )

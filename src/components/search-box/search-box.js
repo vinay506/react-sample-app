@@ -1,15 +1,14 @@
 import React from 'react';
-import {  MDBIcon } from "mdbreact";
+// import {  MDBIcon } from "mdbreact";
 
-function SearchBox() {
+function SearchBox(props) {
+    console.log('In search Box',props);
     return (
         <div>
-            search box
-            <MDBIcon icon="search" />
-            {/* <MDBIcon icon="search" />
-            <input className="form-control" type="text" placeholder="Search" aria-label="Search" /> */}
+            <input className="form-control" type="text" placeholder="Search" aria-label="Search" />
+            <button>Search</button>
         </div>
     )
 }
 
-export default SearchBox
+export default SearchBox;

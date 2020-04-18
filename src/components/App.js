@@ -6,7 +6,8 @@ import ImagesListView from './images_view/imagesListView';
 import Home from './home/home';
 import TabsView from './tabs_view/tabsView';
 
-function App() {
+function App(props) {
+  console.log(props,"props");
   return (
     <div className="body_container">
       <SideBar />
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" exact component={Home}/>
           <Route path="/imagesListView"  component={ImagesListView}/>
           <Route path="/tabsView" component={TabsView}/>
+          <Route path="*" component={Home} />
         </Switch>
       </div>
     </div>
