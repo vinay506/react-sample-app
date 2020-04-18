@@ -5,14 +5,15 @@ import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch } from 'react-router-dom'
 import Header from './components/header/header';
-import SideBar from './components/sidebar/sidebar';
+
 
 const RootOfApp = () => {
   return (
     <BrowserRouter>
       <Header />
-      <SideBar />
-      <App className=""/>
+      <Switch>
+        <App className="" />
+      </Switch>
     </BrowserRouter>
   )
 }

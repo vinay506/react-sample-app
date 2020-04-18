@@ -1,9 +1,14 @@
 {
-    "pages":[
-    {
-        "pageName": "Images View"
-    },{
-        "pageName": "Tabs View"
-    }     
+    "pages": [
+        {
+            "pageName": "Images View",
+            "key": "imageView",
+            "linkTo":"/imagesListView"
+        },
+        {
+            "pageName": "Tabs View",
+            "key": "tabView",
+            "linkTo":"/tabsView"
+        }
     ]
 }
