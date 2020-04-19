@@ -1,26 +1,25 @@
-import React,{useEffect } from 'react';
+import React,{useEffect ,useState} from 'react';
 import SearchBox from '../search-box/search-box';
-import axios from 'axios'
-
+import apiService from '../apiService'
+import ImageList from '../image_list/ImageList'
 function ImagesListView() {
 
+    const [images,setImages] = useState([]);
+
+    const fetchImages =  async () => {
+        const response =  await apiService.get('/search/photos',{
+              params:{query:'cars'}
+          });
+          setImages(response.data.results);
+       }
+
     useEffect(() => {
-     async () => {
-      const response =  await axios.get('https://api.unsplash.com/search/photos',{
-            params:{query:'cars'},
-            headers:{
-                Authorization:'Client-ID YTKtPTHClgOjIDYdOleZxLAIjIYc3pOcwwKTUUg54j4'
-            }
-        })  
-        
-        console.log('testing');
-        console.log(response);
-       
-     }  
+       fetchImages()
     }, [])
     return (
         <div>
             <SearchBox/>
+            <ImageList images={images}/>
         </div>
     )
 }
